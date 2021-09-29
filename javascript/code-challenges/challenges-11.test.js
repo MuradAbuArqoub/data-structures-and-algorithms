@@ -171,7 +171,7 @@ let findMaleAndFemale = (data) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named findShortest that, given the Star Wars data from Challenge 6, uses any combination of filter, map and reduce to return the name of the character who is the shortest in height.
+Write a function named findShortest that, given the Star Wars data from Challenge 6, uses any combination of filter, map and reduce to return the name of the character who is the shortest in height. c:
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
