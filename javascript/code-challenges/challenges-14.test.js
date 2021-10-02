@@ -167,6 +167,33 @@ Here is a sample board:
 
 const detectTicTacToeWin = (board) => {
   // Solution code here...
+  const Test = (arr, row1, col1, row2, col2, row3, col3) => {
+    if (arr[row1][col1] === arr[row2][col2] && arr[row1][col1] === arr[row3][col3]) {
+      if (arr[row1][col1] === '') {
+        return false;
+      }
+      else {
+        return true;
+      }
+    }
+    else {
+      return false;
+    }
+  };
+
+  let win = false;
+  Test(board, 0, 0, 1, 0, 2, 0) ? win = true : win;
+  Test(board, 0, 1, 1, 1, 2, 1) ? win = true : win;
+  Test(board, 0, 2, 1, 2, 2, 2) ? win = true : win;
+
+  Test(board, 0, 0, 0, 1, 0, 2) ? win = true : win;
+  Test(board, 1, 0, 1, 1, 1, 2) ? win = true : win;
+  Test(board, 2, 0, 2, 1, 2, 2) ? win = true : win;
+
+  Test(board, 0, 0, 1, 1, 2, 2) ? win = true : win;
+  Test(board, 0, 2, 1, 1, 2, 0) ? win = true : win;
+
+  return win;
 };
 
 /* ------------------------------------------------------------------------------------------------
